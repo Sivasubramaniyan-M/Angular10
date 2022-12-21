@@ -1,0 +1,42 @@
+<section class="vh-100" style="padding: 50px;">
+<div class="col-md-12 text-center" style="width: 50%;text-align: center; left: 50%;
+top: 50%;
+margin-left: -25%;
+position: absolute;
+margin-top: -25%;padding-top: 100PX ;">
+<form>
+  <!-- Email input -->
+  <div class="form-outline mb-4">
+    <input type="email" id="form2Example1" class="form-control" [(ngModel)]="loginObj.email"/>
+    <label class="form-label" for="form2Example1">Email address</label>
+  </div>
+
+  <!-- Password input -->
+  <div class="form-outline mb-4">
+    <input type="password" id="form2Example2" class="form-control"[(ngModel)]="loginObj.password" />
+    <label class="form-label" for="form2Example2">Password</label>
+  </div>
+
+  
+    <div class="col d-flex justify-content-center">
+          </div>
+ 
+  <button type="button" class="btn btn-primary btn-block mb-4" (click)="onSignIn()">Sign in</button>
+  <!-- Register buttons -->
+  <div class="text-center">
+    <p>Not a member? <a (click)="signup()">Register</a></p>
+
+  </div>
+  <div  class="col-md-12 text-center">
+        <button type="button" class="btn btn-primary col-md-12 text-center" 
+        style="width: 500px; text-align:center" data-toggle="button" aria-pressed="false" autocomplete="off" 
+        (click)="guest()">
+      guest mode
+    </button>
+    
+  </div>
+  
+<router-outlet></router-outlet>
+</form>
+</div>
+</section>
